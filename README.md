@@ -49,4 +49,4 @@ Usage: ./wrapper.sh <OPTIONS>
 
 # How to use
 
-vidoe 
+https://youtu.be/SYriAv_FPAg
