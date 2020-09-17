@@ -7,7 +7,7 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 - [x] generate a payload with msfvenom.
 - [x] generate a shellcode from it
 - [x] encodes it.
-- [x] apply 2nd layer of encoding using sgn.
+- [x] apply 2nd layer of encoding using [sgn](https://github.com/egebalci/sgn/).
 - [x] transfer it into a shellcode format of use or create exe file that triggers that shellcode using syscalls.
 
 
@@ -19,11 +19,11 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 ```
 git clone https://github.com/0xx7/PEPWN.git
 ```
-Once you download the project, build the dependencies using this command
-
-> ./build.sh
-
-Then 
+Once you download the project, build the dependencies using the following command, however make sure you are root:
+```
+./build.sh
+```
+Then, to run it with the manual/options add -H  
 
 ./wrapper -H
 
