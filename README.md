@@ -24,9 +24,9 @@ Once you download the project, build the dependencies using the following comman
 ./build.sh
 ```
 Then, to run it with the manual/options add -H  
-
+```
 ./wrapper -H
-
+```
 
 
 ## Documentation
