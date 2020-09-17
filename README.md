@@ -4,11 +4,11 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 
 # Overview
 
-1- generate a payload with msfvenom.
-2- generate a shellcode from it
-3- encodes it.
-4- apply 2nd layer of encoding using sgn.
-5- transfer it into a shellcode format of use or create exe file that triggers that shellcode using syscalls.
+- [x] generate a payload with msfvenom.
+- [x] generate a shellcode from it
+- [x] encodes it.
+- [x] apply 2nd layer of encoding using sgn.
+- [x] transfer it into a shellcode format of use or create exe file that triggers that shellcode using syscalls.
 
 
 
