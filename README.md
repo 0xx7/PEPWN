@@ -14,13 +14,14 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 
 # Installation
 
-Go to /root directory 
+>Go to /root directory 
 
-> git clone https://github.com/0xx7/PEPWN.git
+```
+git clone https://github.com/0xx7/PEPWN.git
+```
+Once you download the project, build the dependencies using this command
 
-
-
-./build.sh
+> ./build.sh
 
 Then 
 
