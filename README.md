@@ -27,7 +27,11 @@ Then, to run it with the manual/options add -H
 ```
 ./wrapper -H
 ```
+Example:
 
+```
+./wrapper.sh -f 1 -h 127.0.0.1 -p 4444
+```
 
 ## Documentation
 
