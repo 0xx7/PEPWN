@@ -42,15 +42,15 @@ This command will create an EXE stageless reverse shell payload that connects ba
  
  OPTIONS are:
  
- #-f : format/Mode (1 for .exe PE file <DEFAULT> ; 2 for shellcode)
+ **-f** : format/Mode (1 for .exe PE file <DEFAULT> ; 2 for shellcode)
  
- #-t : type of shellcode. 1 for raw data ; 2 for base64encoded data ; 3 for big endian hex encoded string. (only if format is 2 otherwise this will be ignored)
+ **-t** : type of shellcode. 1 for raw data ; 2 for base64encoded data ; 3 for big endian hex encoded string. (only if format is 2 otherwise this will be ignored)
  
- #-h : host/ip/domain of the listener
+ **-h** : host/ip/domain of the listener
  
- #-p : port of the listener
+ **-p** : port of the listener
  
- #-H : help documentation
+ **-H** : help documentation
  
  Example: ./wrapper.sh -f 1 -h 127.0.0.1 -p 4444
 
