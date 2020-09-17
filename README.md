@@ -38,7 +38,7 @@ This command will create an EXE stageless reverse shell payload that connects ba
 
 ## Documentation
 
->Usage: ./wrapper.sh <OPTIONS>
+Usage:``` ./wrapper.sh <OPTIONS> ```
  
  OPTIONS are:
  
