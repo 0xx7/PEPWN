@@ -4,7 +4,9 @@ PEPWN is a multi chained tool that has a goal to generate an undetectable revers
 
 ## Overview
 
-- [x] generate a payload with msfvenom.
+>The creation of the payload in PEPWN is composed of 5 steps:
+
+- [x] it generate a payload with msfvenom.
 - [x] It uses the [DONUT](https://github.com/TheWover/donut/) project. That will convert the generated EXE payload and extract shellcode from it. It's just a project to facilitate extracting shellcodes from executable binaries
 - [x] Using the same project DONUT, the tool will apply an encoding logic on the generated payload. But the logic implemented by DONUT is going to get statically detectable because it's using a static pattern of encryption/encoding with a static key. That's why I used a second layer of encoding.
 - [x] apply 2nd layer of encoding using [sgn](https://github.com/egebalci/sgn/). sgn encodes shellcodes using LSFR algorithm with random key in every compilation.
