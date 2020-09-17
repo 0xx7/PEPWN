@@ -2,7 +2,7 @@
 PWNPE is a multi chained tool that has a goal to generate an undetectable reverse shell payload in different formats (PE, shellcode). The payload is stageless and it works without the need of Metasploit Handler, it just needs a TCP listener (using netcat).
 
 
-# Overview
+## Overview
 
 - [x] generate a payload with msfvenom.
 - [x] generate a shellcode from it
@@ -12,7 +12,7 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 
 
 
-# Installation
+## Installation
 
 >Go to /root directory 
 
@@ -29,7 +29,7 @@ Then
 
 
 
-# Documentation
+## Documentation
 
 Usage: ./wrapper.sh <OPTIONS>
  
@@ -48,7 +48,7 @@ Usage: ./wrapper.sh <OPTIONS>
  Example: ./wrapper.sh -f 1 -h 127.0.0.1 -p 4444
 
 
-# How to use
+## How to use
 
 https://youtu.be/SYriAv_FPAg
 
