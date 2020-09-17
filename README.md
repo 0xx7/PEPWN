@@ -55,7 +55,7 @@ This command will create an EXE stageless reverse shell payload that connects ba
  Example: ./wrapper.sh -f 1 -h 127.0.0.1 -p 4444
 
 
-## How to use
+## Usage 
 
 https://youtu.be/SYriAv_FPAg
 
