@@ -6,11 +6,11 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 
 - [x] generate a payload with msfvenom.
 - [x] It uses the [DONUT](https://github.com/TheWover/donut/) project. That will convert the generated EXE payload and extract shellcode from it. It's just a project to facilitate extracting shellcodes from executable binaries
-- [x] encodes it.
-- [x] apply 2nd layer of encoding using [sgn](https://github.com/egebalci/sgn/).
-- [x] transfer it into a shellcode format of use or create exe file that triggers that shellcode using syscalls.
+- [x] Using the same project DONUT, the tool will apply an encoding logic on the generated payload. But the logic implemented by DONUT is going to get statically detectable because it's using a static pattern of encryption/encoding with a static key. That's why I used a second layer of encoding.
+- [x] apply 2nd layer of encoding using [sgn](https://github.com/egebalci/sgn/). sgn encodes shellcodes using LSFR algorithm with random key in every compilation.
+- [x] transfer it into a shellcode format of use ex: (base64, hex string, and raw data), or create exe file that triggers the shellcode using syscalls.
 
-
+If the user chooses to create exe file, the tool prepares a c++ file that invokes that shellcode with using syscalls instead of dll calls. For example instead of using "VirtualAlloc" dll call, it uses "NtAllocateVirtualMemory" syscall because the defender can easilly hook dll calls and detect the call to "VirtualAlloc" and consider it as malicious action.
 
 ## Installation
 
