@@ -19,7 +19,7 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 ```
 git clone https://github.com/0xx7/PEPWN.git
 ```
-Once you download the project, build the dependencies using the following command, however make sure you are root:
+Once you download the project, build the dependencies using the following command, however make sure you are running as root:
 ```
 ./build.sh
 ```
