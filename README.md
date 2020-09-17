@@ -16,7 +16,7 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 
 Go to /root directory 
 
-git clone https://github.com/0xx7/PEPWN.git
+>git clone https://github.com/0xx7/PEPWN.git
 
 
 
