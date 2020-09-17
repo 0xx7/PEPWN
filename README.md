@@ -5,7 +5,7 @@ PWNPE is a multi chained tool that has a goal to generate an undetectable revers
 ## Overview
 
 - [x] generate a payload with msfvenom.
-- [x] generate a shellcode from it
+- [x] It uses the [DONUT](https://github.com/TheWover/donut/) project. That will convert the generated EXE payload and extract shellcode from it. It's just a project to facilitate extracting shellcodes from executable binaries
 - [x] encodes it.
 - [x] apply 2nd layer of encoding using [sgn](https://github.com/egebalci/sgn/).
 - [x] transfer it into a shellcode format of use or create exe file that triggers that shellcode using syscalls.
